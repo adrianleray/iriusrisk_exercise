@@ -11,9 +11,17 @@ Note: You can use an AWS or GCP temporary free tier account that should stay ava
 weeks.
 
 # Solution
+In order to bring a solution for this exercise, I create the next architecture in AWS:
+||Component||Description||
+|Lambda function|Process text and write in a file in S3 the ouput of process|
+|S3 Bucket|Save and share output of landa process|
+|API Gateway|Offers a interface as an API to execute lambda process|
 
 # How-to
-## API 
+API request is available here:
 https://fmmamnf131.execute-api.eu-west-3.amazonaws.com/process-text
-Example with cURL:
-curl -X POST https://fmmamnf131.execute-api.eu-west-3.amazonaws.com/process-text -data "text"
+
+Example how to send a request with cURL:
+curl -X POST https://fmmamnf131.execute-api.eu-west-3.amazonaws.com/process-text -H "Content-type:text/plain" -d '"text"'
+
+Response is a URL with output of lambda function process.
