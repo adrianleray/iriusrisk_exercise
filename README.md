@@ -12,7 +12,8 @@ weeks.
 
 # Solution
 In order to bring a solution for this exercise, I create the next architecture in AWS:
-||Component||Description||
+|Component|Description|
+|---|---|
 |Lambda function|Process text and write in a file in S3 the ouput of process|
 |S3 Bucket|Save and share output of landa process|
 |API Gateway|Offers a interface as an API to execute lambda process|
